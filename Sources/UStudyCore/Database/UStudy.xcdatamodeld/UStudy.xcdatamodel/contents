@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16114.2" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Account" representedClassName="Account" syncable="YES" codeGenerationType="category">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="credentials" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LoginCredential" inverseName="account" inverseEntity="LoginCredential"/>
+        <relationship name="data" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StoredData" inverseName="account" inverseEntity="StoredData"/>
+    </entity>
+    <entity name="LoginCredential" representedClassName="LoginCredential" syncable="YES" codeGenerationType="category">
+        <attribute name="id" attributeType="String"/>
+        <attribute name="value" attributeType="String"/>
+        <relationship name="account" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="credentials" inverseEntity="Account"/>
+    </entity>
+    <entity name="StoredData" representedClassName="StoredData" syncable="YES" codeGenerationType="category">
+        <attribute name="data" optional="YES" attributeType="Binary"/>
+        <attribute name="key" optional="YES" attributeType="String"/>
+        <relationship name="account" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="data" inverseEntity="Account"/>
+    </entity>
+    <elements>
+        <element name="Account" positionX="-45" positionY="81" width="128" height="133"/>
+        <element name="LoginCredential" positionX="-233.15234375" positionY="-58.046875" width="128" height="88"/>
+        <element name="StoredData" positionX="-135" positionY="45" width="128" height="88"/>
+    </elements>
+</model>

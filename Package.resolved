@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SchafKit",
+        "repositoryURL": "https://github.com/Quintschaf/SchafKit.git",
+        "state": {
+          "branch": "master",
+          "revision": "0abadbee4efde99214eaac31c2432652e3bb8502",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

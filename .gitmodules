@@ -1,0 +1,3 @@
+[submodule "Sources/UStudyCore/Resources/Core"]
+	path = Sources/UStudyCore/Resources/Core
+	url = git@github.com:JannThomas/UStudy.git
